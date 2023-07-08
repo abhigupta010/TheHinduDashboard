@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Serif+Pro", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+nav{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width:100%;
+  height: 70px;
+  background: #fffef8;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+.navLink{
+  display: flex;  
+  padding: 15px 20px;
+  margin-top:10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #22292b;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+} 
+.navLink:hover{
+  height:4px;
+  color: #3c4244;
+  border-radius: 5px;
+  background-color: #fdd8e5;
+}
+.text-neutral{
+  margin-top: -20px;
+}
+ nav .animation{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: #1abc9c;
+  border-radius: 80x;
+  transition: all .5s ease 0s;
+}
+.right.carousel-control, .left.carousel-control {
+  display: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* nav .navLink:nth-child(1){
+  width: 100px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav .start-home, nav .navLink:nth-child(1):hover~.animation{
+  width: 100px;
+  left: 0;
 }
+.navLink:nth-child(2){
+  width: 110px;
+}
+.navLink:nth-child(2):hover~.animation{
+  width: 110px;
+  left: 100px;
+}
+.navLink:nth-child(3){
+  width: 100px;
+}
+.navLink:nth-child(3):hover~.animation{
+  width: 110px;
+  left: 210px;
+} */
