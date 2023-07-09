@@ -1,18 +1,29 @@
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom
-// import About from './Components/About/index';
-// import ContactUs from "./Components/ContactUs/index";
-// import Home from "./Components/Home/index";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './App.css';
-import NavRoutes from './routes.jsx';
-// import Services from "./Components/Services";
-// import Header from "./Components/Header";
+import NavRoutes from "./routes";
 
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Router>
+      <nav className="navbar">
+    <div className="logo">
+      <h3><Link to="/">THE HINDU</Link></h3>
+      <p><Link to="/">Dashboard</Link></p>
+      </div>
+    <ul className="nav-links">
+      <div className="menu">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/pricing">Pricing</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </div>
+    </ul>
+  </nav>
       <NavRoutes/>
+  </Router>
     </>
   );
 }
